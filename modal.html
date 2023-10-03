@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style7.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            
+            $('#showbtn').click(function () {
+                $('#myModal').modal('show');
+            })
+            $('#showbtn').click(function () {
+                $('#myModal').modal('hide');
+            })
+            $('#myModal').on('shown.bs.modal', function () {
+                alert('Modal is shown');
+            })
+            $('#myModal').on('show.bs.modal', function () {
+                alert('Modal is show');
+            })
+            $('#myModal').on('hidePrevented.bs.modal', function () {
+                alert('Modal is prevented');
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Modal Pluging</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-3">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch Modal</button>
+                <button id="showbtn" class="btn btn-success">Click</button>
+                <div class="modal fade" id="myModal" data-bs-backdrop="static" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal-title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <!--<button class="close" data-bs-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>-->
+                            </div>
+                            <div class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex enim
+                                reprehenderit quisquam officia accusantium ipsam necessitatibus iure sint voluptatem.
+                                Necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quaerat
+                                veniam itaque assumenda facere voluptatem quisquam enim praesentium cum. Excepturi iure
+                                cum esse consectetur hic minima repellendus ut corrupti illum fugiat similique dolore
+                                eos tenetur, amet dolorem id impedit sit. Ullam vel dolores ut sunt? Velit est eum amet
+                                sit consequuntur reiciendis distinctio, voluptate nihil aliquid exercitationem sequi
+                                deleniti eaque nostrum, aspernatur eius possimus ex cumque omnis dolorum! Atque
+                                perspiciatis id quisquam provident, perferendis repellat aspernatur qui dolore quis nam
+                                esse, voluptatem commodi necessitatibus! Fugit soluta quae cumque tempore ratione
+                                voluptatum saepe a at debitis quod natus id distinctio modi odio sapiente nihil, omnis
+                                porro ad! Saepe commodi provident molestiae dolore libero fugit sunt, odio perspiciatis
+                                praesentium, dolorum, aspernatur temporibus cillo vel. Quisquam, porro corporis? Modi
+                                reiciendis odio alias a officia perferendis eius ab, id libero facilis. Dolore sapiente
+                                voluptatibus quaerat blanditiis in autem assumenda eaque cum accusamus! Dolorem dicta
+                                cupiditate magnam mollitia! Mollitia fuga temporibus officiis obcaecati corrupti dolores
+                                eius beatae, modi dolorem nobis sequi odit nihil voluptatem minima. Odit officia unde
+                                labore et pariatur consectetur voluptatem aliquid facilis temporibus? Aperiam laudantium
+                                dolore excepturi architecto quia in suscipit minus deleniti quae perferendis voluptate
+                                mollitia officia doloremque saepe pariatur, ipsa nisi assumenda, ea iste! At sint ab
+                                provident temporibus iusto. Reprehenderit tenetur mollitia delectus at officia sint odio
+                                maiores rerum nulla voluptates perspiciatis optio fugiat tempora atque, hic et, porro
+                                possimus blanditiis ipsam repellendus. Voluptatibus sit eaque voluptas. Praesentium
+                                doloremque consequuntur, eaque tempora accusantium beatae, qui porro id adipisci, nemo
+                                delectus nesciunt.
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6">Clo A</div>
+                                        <div class="col-md-6lorem10
+                                        ">Col B</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Clo C Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Porro, sit?</div>
+                                        <div class="col-md-4">Col D</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button class="btn btn-primary" data-bs-dismiss="modal">Save Change</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

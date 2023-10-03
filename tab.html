@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style7.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</head>
+<script>
+    $(function() {
+        $('#myTab a').on('click', function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+        $('#myTab a').on('show.bs.tab', function(e) {
+           console.log( e.target );// newly activated tab
+            console.log(e.relatedTarget); // previous active tab
+            alert("Tab is show");
+        })
+        $('#myTab a').on('shown.bs.tab', function(e) {
+            e.target // newly activated tab
+            e.relatedTarget // previous active tab
+            alert("Tab is shown");
+        })
+        $('#myTab a').on('hide.bs.tab', function(e) {
+            e.target // newly activated tab
+            e.relatedTarget // previous active tab
+            alert("Tab is hide");
+        })
+    });
+</script>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Tabs</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-6">
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link active"  href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent
+                ">
+                    <div class="tab-pane fade show active" id="home">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime nisi.
+
+                    </div>
+                    <div class="tab-pane fade " id="profile">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime Lorem ipsum dolor
+                        sit amet.
+
+                    </div>
+                    <div class="tab-pane fade show active" id="contact">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime
+                        nisi.e Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, nisi!
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav nav-pills" id="pills-tab">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#home1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#profile1">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#contact1">Contact</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent
+                ">
+                    <div class="tab-pane fade show active" id="home1">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime nisi.
+
+                    </div>
+                    <div class="tab-pane fade " id="profile1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime Lorem ipsum dolor
+                        sit amet.
+
+                    </div>
+                    <div class="tab-pane fade show active" id="contact1">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime
+                        nisi.e Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, nisi!
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <ul class="nav nav-pills flex-column" id="vertical-tab">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="pill" href="#home2">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#profile2">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#contact2">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-9">
+                    <div class="vertical-tab-content" id="myTabContent
+                ">
+                        <div class="tab-pane fade show active" id="home2">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias
+                            maxime nisi.
+
+                        </div>
+                        <div class="tab-pane fade " id="profile2">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias maxime Lorem
+                            ipsum dolor sit amet.
+
+                        </div>
+                        <div class="tab-pane fade active" id="contact2">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Totam accusantium accusamus deserunt possimus officia nobis neque alias
+                            maxime nisi.e Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus,
+                            nisi!
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

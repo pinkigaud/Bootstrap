@@ -1,0 +1,19 @@
+.container,
+.container-lg{
+    border: 5px solid black;
+}
+.col-md-4{
+    background: pink;
+    color: green;
+}
+.nav{
+    background: darkcyan;
+}
+.nav-link{
+    color: #fff;
+}
+.nav-link:hover,
+.nav-link.active{
+    color: #fff;
+    background: sandybrown;
+}

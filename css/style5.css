@@ -1,0 +1,8 @@
+.container{
+    border: 5px solid black;
+}
+/*--------------bootstrap color & background which is not inbuilt classes-*/
+h2{
+    background: var(--bs-purple);
+    color: var(--bs-yellow);
+}

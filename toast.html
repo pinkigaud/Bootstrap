@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function() {
+            $('#showBtn').click(function() {
+                $('.toast').toast('show');
+            });
+            $('#hideBtn').click(function() {
+                $('.toast').toast('hide');
+            });
+           $("#myToast").on('show.bs.toast', function(){
+               alert('Show Event');
+           });
+           $("#myToast").on('hide.bs.toast', function(){
+               alert('hide Event');
+           });
+           $("#myToast").on('shown.bs.toast', function(){
+               alert('Shown Event');
+           });
+           $("#myToast").on('hidden.bs.toast', function(){
+               alert('hidden Event');
+           });
+        });
+              </script>
+</head>
+
+<body >
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap toasts</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-4">
+                <button id="showBtn" class="btn btn-primary">Show</button>
+                <button id="hideBtn" class="btn btn-danger">hide</button>
+                <div style="position: absolute;top:20px; left: 20px;">
+                    <div class="toast mb-3 " id="myToast" data-bs-autohide="false">
+                        <div class="toast-header">
+                            <img class="rounded me-2" src="images/bootstrap.png" width="20px" alt="">
+                            <b class="me-auto">Bootstrap Toast</b>
+                            <small class="text-muted">1 sec ago</small>
+                            <button class="btn-close ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                            repellat.</div>
+                    </div>
+                    <div class="toast" id="myToast" data-bs-delay="3000">
+                        <div class="toast-header">
+                            <img class="rounded me-2" src="images/bootstrap.png" width="20px" alt="">
+                            <b class="me-auto">Bootstrap Toast</b>
+                            <small class="text-muted">1 sec ago</small>
+                            <button class="btn-close ms-2" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                            repellat.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style7.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#example").tooltip({
+            title:"<img src='images/bootstrap.png' width='30px' height='30px'><h2>Tooltip<br>Heading Goes Here</h2>",
+            html:true,
+            Animation:false,
+            placement:"bottom"
+        });
+        $("#showbtn").click(function(){
+            $("#example").tooltip("show");
+        });
+        $("#hidebtn").click(function(){
+            $("#example").tooltip("hide");
+        });
+        $("#example").on("show.bs.tooltip",function(){
+            alert("show");
+        });
+        $("#example").on("shown.bs.tooltip",function(){
+            alert("shown");
+        });
+        $("#example").on("shown.bs.tooltip",function(){
+            alert("inserted");
+        });
+        $("#example").on("show.bs.tooltip",function(){
+            alert("hide");
+        });
+        $("#example").on("shown.bs.tooltip",function(){
+            alert("hidden");
+        });
+        });
+        
+
+</script>
+</head>
+<body>
+    <div class="container mb-5">
+        <h2 class="py-3 text-center">Bootstrap Tooltips</h2>
+        <div class="row py-3">
+            
+            <div class="col-md-7 mx-auto">
+                <button class="btn btn-primary" id="example" title="<img src='images/bootstrap.png' width='30px' height='30px'><h2>Tooltip<br>Heading Goes Here</h2>">Tooltip</button>
+                
+                <button class="btn btn-danger" id="showbtn">Show</button>
+                <button class="btn btn-warning" id="hidebtn">Hide</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

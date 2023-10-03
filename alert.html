@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style7.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#closebtn").click(function(){
+                $("#redbox").alert("close");
+            });
+            $(".alert").on("close.bs.alert",function(){
+                alert("close");
+            });
+            $(".alert").on("close.bs.alert",function(){
+                alert("closed");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Alert</h2>
+        <div class="row py-3 justify-content-center">
+            <div class="col-md-7">
+                <div class="alert alert-primary">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, error!
+                    
+                </div>
+                <div class="alert alert-success">
+                    Lorem, ipsum dolor<a href="" >sit amet consectetur adipisicing elit.</a> Minima, error!
+                </div>
+                <div class="alert alert-danger">
+                    Lorem, ipsum dolor<a class="alert-link" href="" >sit amet consectetur adipisicing elit.</a> Minima, error!
+                </div>
+                <div id="redbox" class="alert alert-info">
+                    <h3 class="alert-heading">Heading Goes Here</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis modi sed consequuntur consectetur pariatur, provident consequatur architecto commodi eum molestiae doloribus vel aspernatur eos sit natus quae ipsam illum voluptatum ipsum corrupti, ratione tempore hic. Impedit, quasi voluptatum. Velit reprehenderit error voluptatibus mollitia iusto quia eveniet nobis assumenda? Possimus, fuga!</p>
+                    <hr>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod fugiat officiis repellat quam non fuga omnis quis sed vero magnam.</p>
+                </div>
+                <button class="btn btn-warning mb-3" id="closebtn">Close</button>
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style7.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-bs-toggle="popover"]').popover({
+                html: true,
+                delay: { "show": 1000, "hide": 1000 }
+            });
+            $('#showbtn').click(function () {
+                $('#example').popover('show');
+            });
+            $('#hidebtn').click(function () {
+                $('#example').popover('hide');
+            });
+            $('#example').on("show.bs.popover",function(){
+                alert("show");
+            });
+            $('#example').on("shown.bs.popover",function(){
+                alert("shown");
+            });
+            $('#example').on("hide.bs.popover",function(){
+                alert("hide");
+            });
+            $('#example').on("hidden.bs.popover",function(){
+                alert("hidden");
+            });
+            $('#example').on("inserted.bs.popover",function(){
+                alert("inserted");
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Popover</h2>
+        <div class="row py-5">
+            <div class="col-md-7 mx-auto">
+                <button id="example" class="btn btn-primary" data-bs-placement="bottom" data-bs-toggle="popover"
+                    title="Popover title"
+                    data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, odio!">Popover</button>
+                <button class="btn btn-warning" data-bs-placement="top" data-bs-toggle="popover" title="Popover title 2"
+                    data-bs-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, odio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, iure? ">Popover</button>
+                <button class="btn btn-info" data-bs-placement="right" data-bs-toggle="popover" title="Popover title 3"
+                    data-bs-content="<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>  ">Popover</button>
+                <button id="showbtn" class="btn btn-danger">show</button>
+                <button id="hidebtn" class="btn btn-danger">hide</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
